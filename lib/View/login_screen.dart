@@ -24,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void _login() async {
     setState(() {
       _isLoading = true; // Show spinner
+      
     });
 
     // Call login method from AuthService with user inputs

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:role_based_login/Service/auth_service.dart';
+import 'package:role_based_login/View/login_screen.dart';
+
+final AuthService _authService = AuthService();
 
 class AdminScreen extends StatelessWidget {
   const AdminScreen({super.key});
@@ -7,11 +11,34 @@ class AdminScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(title: const Text('Admin Screen')),
-      body: const Center(child: Text('Welcome to the Admin! page')),
+      appBar: AppBar(
+        title: const Text('Admin Screen'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Welcome to the Admin! page'),
+            ElevatedButton(
+              onPressed: () {
+                _authService.signOut();
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const LoginScreen(),
+                  ),
+                );
+              },
+              child: const Text("SignOut"),
+            ),
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child:const Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -23,9 +50,32 @@ class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
-      appBar: AppBar(title: const Text('User Screen')),
-      body: const Center(child: Text('Welcome User!')),
+      backgroundColor: Colors.green,
+      appBar: AppBar(title: const Text('User Screen'),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Welcome User!'),
+            ElevatedButton(
+              onPressed: () {
+                _authService.signOut();
+                print("signou successfuley");
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const LoginScreen(),
+                  ),
+                );
+              },
+              child: const Text("SignOut"),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

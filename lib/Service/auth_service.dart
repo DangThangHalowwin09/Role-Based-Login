@@ -58,4 +58,9 @@ class AuthService {
       return e.toString(); // Error: return the exception message
     }
   }
+
+  // for user log out
+  signOut() async {
+    _auth.signOut();
+  }
 }
