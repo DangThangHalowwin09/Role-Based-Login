@@ -1,8 +1,8 @@
 // This screen handles user login with email and password
 import 'package:flutter/material.dart';
-import 'package:role_based_login/View/home.dart';
-import 'package:role_based_login/View/signup.dart';
-import 'package:role_based_login/auth_service.dart';
+import 'package:role_based_login/View/home_screen.dart';
+import 'package:role_based_login/View/signup_screen.dart';
+import 'package:role_based_login/Service/auth_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -58,6 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
+  bool isPasswordHidden = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,9 +83,21 @@ class _LoginScreenState extends State<LoginScreen> {
               // Input for password
               TextField(
                 controller: _passwordController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Password',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        isPasswordHidden = !isPasswordHidden;
+                      });
+                    },
+                    icon: Icon(
+                      isPasswordHidden
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                    ),
+                  ),
                 ),
                 obscureText: true, // Hide password
               ),
@@ -98,7 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: const Text('Login'),
                       ),
                     ),
-              // Navigation to SignupScreen
+
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

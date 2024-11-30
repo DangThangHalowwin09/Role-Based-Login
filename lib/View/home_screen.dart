@@ -6,8 +6,13 @@ class AdminScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(title: const Text('Admin Screen')),
-      body: const Center(child: Text('Welcome Admin!')),
+      body: const Center(child: Text('Welcome to the Admin! page')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child:const Icon(Icons.add),
+      ),
     );
   }
 }
@@ -18,6 +23,7 @@ class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(title: const Text('User Screen')),
       body: const Center(child: Text('Welcome User!')),
     );

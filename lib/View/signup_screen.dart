@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:role_based_login/View/login.dart';
-import 'package:role_based_login/auth_service.dart';
+import 'package:role_based_login/View/login_screen.dart';
+import 'package:role_based_login/Service/auth_service.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -20,6 +20,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   String _selectedRole = 'User'; // Default selected role for dropdown
   bool _isLoading = false; // To show loading spinner during signup
+  bool isPasswordHidden = true;
 
   // Signup function to handle user registration
   void _signup() async {
@@ -89,11 +90,23 @@ class _SignupScreenState extends State<SignupScreen> {
               // Input for password
               TextField(
                 controller: _passwordController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Password',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                     onPressed: () {
+                      setState(() {
+                        isPasswordHidden = !isPasswordHidden;
+                      });
+                    },
+                    icon: Icon(
+                      isPasswordHidden
+                          ? Icons.visibility_off
+                          : Icons.visibility,
+                    ),
+                  ),
                 ),
-                obscureText: true, // Hide the password
+                obscureText: isPasswordHidden, // Hide the password
               ),
               const SizedBox(height: 16),
               // Dropdown for selecting role
