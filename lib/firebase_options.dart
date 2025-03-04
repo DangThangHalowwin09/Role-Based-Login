@@ -41,48 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBKeFpeW_J53Jh1hVFr30c06W6CoNKYOsI',
-    appId: '1:1053093241218:web:f7e6224d0ec39adb6d2f9b',
-    messagingSenderId: '1053093241218',
-    projectId: 'role-based-login-be279',
-    authDomain: 'role-based-login-be279.firebaseapp.com',
-    storageBucket: 'role-based-login-be279.firebasestorage.app',
-    measurementId: 'G-D4DFVSGNZB',
+    apiKey: 'AIzaSyBK_SVII93P0-hnUOHe0JqPDXMASXeitDs',
+    appId: '1:385662617488:web:3ee08134393d6118789515',
+    messagingSenderId: '385662617488',
+    projectId: 'test-937d3',
+    authDomain: 'test-937d3.firebaseapp.com',
+    storageBucket: 'test-937d3.firebasestorage.app',
+    measurementId: 'G-W3882XP4HW',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB8jp_K3XRJtgY5DRtprxX04myEq9_wvSU',
-    appId: '1:1053093241218:android:7e4b85882e8eae476d2f9b',
-    messagingSenderId: '1053093241218',
-    projectId: 'role-based-login-be279',
-    storageBucket: 'role-based-login-be279.firebasestorage.app',
+    apiKey: 'AIzaSyAixd9ASVYMZbA-GkC8n5AihK8GO8S3NQI',
+    appId: '1:385662617488:android:14e26d94a3575e12789515',
+    messagingSenderId: '385662617488',
+    projectId: 'test-937d3',
+    storageBucket: 'test-937d3.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCKiHfl1ryBBGsBnjCHeIsWcJ6FIdv-Onk',
-    appId: '1:1053093241218:ios:a5d9a705a67bce006d2f9b',
-    messagingSenderId: '1053093241218',
-    projectId: 'role-based-login-be279',
-    storageBucket: 'role-based-login-be279.firebasestorage.app',
+    apiKey: 'AIzaSyBX-Cq5oWLfhw0EZIQG7Dqre6UnrYWd9s8',
+    appId: '1:385662617488:ios:154d3bd35f70ffe5789515',
+    messagingSenderId: '385662617488',
+    projectId: 'test-937d3',
+    storageBucket: 'test-937d3.firebasestorage.app',
     iosBundleId: 'com.example.roleBasedLogin',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCKiHfl1ryBBGsBnjCHeIsWcJ6FIdv-Onk',
-    appId: '1:1053093241218:ios:a5d9a705a67bce006d2f9b',
-    messagingSenderId: '1053093241218',
-    projectId: 'role-based-login-be279',
-    storageBucket: 'role-based-login-be279.firebasestorage.app',
+    apiKey: 'AIzaSyBX-Cq5oWLfhw0EZIQG7Dqre6UnrYWd9s8',
+    appId: '1:385662617488:ios:154d3bd35f70ffe5789515',
+    messagingSenderId: '385662617488',
+    projectId: 'test-937d3',
+    storageBucket: 'test-937d3.firebasestorage.app',
     iosBundleId: 'com.example.roleBasedLogin',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBKeFpeW_J53Jh1hVFr30c06W6CoNKYOsI',
-    appId: '1:1053093241218:web:685c605866e16bb46d2f9b',
-    messagingSenderId: '1053093241218',
-    projectId: 'role-based-login-be279',
-    authDomain: 'role-based-login-be279.firebaseapp.com',
-    storageBucket: 'role-based-login-be279.firebasestorage.app',
-    measurementId: 'G-T2GYHQRPP8',
+    apiKey: 'AIzaSyBK_SVII93P0-hnUOHe0JqPDXMASXeitDs',
+    appId: '1:385662617488:web:22419240a09cbf22789515',
+    messagingSenderId: '385662617488',
+    projectId: 'test-937d3',
+    authDomain: 'test-937d3.firebaseapp.com',
+    storageBucket: 'test-937d3.firebasestorage.app',
+    measurementId: 'G-2PBMWMLCTD',
   );
+
 }
