@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: const EdgeInsets.all(16.0), // Add padding
           child: Column(
             children: [
-              //Image.asset("assets/3094352.jpg"), // Display login screen image
+              //   Image.asset("assets/3094352.jpg"), // Display login screen image
               const SizedBox(height: 20),
               // Input for email
               TextField(
@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
 
               const SizedBox(height: 16),
-              Row(
+             /* Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   const Text(
@@ -140,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ],
-              ),
+              ),*/
             ],
           ),
         ),
